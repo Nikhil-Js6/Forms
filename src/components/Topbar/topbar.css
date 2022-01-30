@@ -1,0 +1,25 @@
+.topbarWrapper{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+.topbar{
+    height: 50px;
+    padding: 6px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #555;
+}
+.topbar a span:hover{
+   color: slateblue;
+}
+.logo{
+   margin-left: 50px;
+   font-size: 30px;
+   font-weight: 500;
+}
+.logo span{
+   font-weight: 300;
+   font-size: 28px;
+}

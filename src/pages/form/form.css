@@ -1,0 +1,97 @@
+.formWrapper{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 20px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 12px;
+}
+.formTop{
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border-top: 8px solid slateblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+}
+.formTop h1{
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.formElementWrapper{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #fff;
+    border-left: 6px solid rgb(56, 119, 236);
+}
+.formQuestion{
+    margin-bottom: 10px;
+}
+.optionWrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.option{
+    flex: 1;
+}
+.area{
+    color: #555;
+    font-size: 16px;
+    width: 70%;
+    border: none;
+    border-bottom: 2px solid gray;
+}
+.area:focus{
+    transition: all .4s step-end;
+    outline: none;
+    border-bottom: 2px solid slateblue;
+}
+.input{
+    flex: .1;
+}
+.submitButton{
+    padding: 8px 20px;
+    border: none;
+    font-size: 16px;
+    background-color: slateblue;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.formSubmit{
+    width: 90%;
+    display: flex;
+    background-color: #fff;
+    border-top: 8px solid slateblue;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 20px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 12px;
+}
+.submitText{
+    font-size: 24px;
+    font-weight: 300;
+}
+.submitEdit{
+    padding: 10px;
+    color: rgb(117, 100, 231);
+    cursor: pointer;
+}

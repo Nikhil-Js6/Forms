@@ -1,0 +1,48 @@
+.optionSpan{
+    display: flex;
+    position: relative;
+    background-color: #3433;
+}
+.type{
+    position: absolute;
+    top: -60px;
+    right: 2%;
+    color: rgb(92, 92, 92);
+    border-bottom: 1.5px solid rgb(160, 160, 160);
+    padding: 8px 12px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.type:active{
+    border: 1px solid slateblue;
+}
+.type p{
+    margin: 0 5px;
+}
+.select{
+    width: 200px;
+    position: absolute;
+    top: -100px;
+    right: 10px;
+    background-color: #fff;
+    z-index: 3;
+}
+.option{
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #444;
+    padding: 10px 10px;
+    border: 1px solid rgb(184, 184, 184);
+    cursor: pointer;
+}
+.option p {
+    margin-left: 8px;
+}
+.option:hover{
+    background-color: rgb(226, 226, 226);
+}

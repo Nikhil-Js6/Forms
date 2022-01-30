@@ -1,0 +1,74 @@
+.create{
+    width: 60%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.successMsg{
+    width: 75%;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 8px solid slateblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+}
+.linkSpan{
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkSpan p{
+    color: rgb(145, 131, 241);
+}
+.successHeading{
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+}
+.successLink{
+    margin-left: 10px;
+    font-size: 1rem;
+    color: rgb(43, 228, 43);
+}
+.buttonWrapper{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+}
+.createButton{
+    padding: 8px 20px;
+    border: none;
+    font-size: 16px;
+    background-color: rgb(20, 175, 175);
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.addField{
+    position: relative;
+    bottom: 130px;
+    width: 50px;
+    height: 100px;
+    border-radius: 8px;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: slateblue;
+    color: rgb(236, 236, 236);
+    margin-left: 30px;
+}
+.addIcon{
+    font-size: 28px !important;
+    cursor: pointer;
+}

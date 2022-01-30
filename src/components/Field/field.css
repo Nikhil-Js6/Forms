@@ -1,0 +1,18 @@
+.fieldWrapper{
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 20px;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 8px;
+    border-left: 6px solid rgb(62, 122, 235);
+}
+.inputSpan{
+    width: 55%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
