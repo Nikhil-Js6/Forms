@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { CheckBoxOutlineBlank, Close, Delete, RadioButtonUnchecked, TextFields } from '@mui/icons-material';
 import './options.css';
 import OptionType from '../OptionType/OptionType';
 
-function Options({ onDelete, field, setField }) {
+function Options({ onDelete, field, setField,fields,setFields }) {
 
     const [options, setOptions] = useState([]);
     const [option, setOption] = useState({});
@@ -15,16 +15,33 @@ function Options({ onDelete, field, setField }) {
         ? 'textarea' : typeNum === 2
         ? 'checkbox' : 'radio');
 
+    useEffect(()=>{
+        setField(prev => {return {...prev,options}});
+    },[options])
+
     const addOption = () => {
         if(optionNum <= 5){
-            setOptions([...options, option]);
-            setField({...field, options });
             setOptionNum(optionNum === 6 ? 5 : optionNum + 1);
             setOption({});
         }
     }
+
+    const handleOptionChange = (event) =>{
+        const optionObject = {
+            optionType:optionType,
+            optionLabel:event.target.value
+        }
+        setOption(optionObject)
+        const copyOptions = [...options];
+        copyOptions[optionNum-1] = optionObject;
+        setOptions(copyOptions)
+    }
+
     const handleDelete = () => {
         setOptionNum(optionNum - 1);
+        const copyOptions = [...options];
+        copyOptions.pop();
+        setOptions(copyOptions);
     }
 
     return (
@@ -38,7 +55,7 @@ function Options({ onDelete, field, setField }) {
                 <div className='optionWrap'>
                     <div className='optionElementWrap'>
                         {typeNum === 2 ? <CheckBoxOutlineBlank /> : <RadioButtonUnchecked />}
-                        <input placeholder='Option' onChange={(e) => setOption({ optionType, optionLabel: e.target.value })}/>
+                        <input placeholder='Option' onChange={handleOptionChange}/>
                     </div>
                     {optionNum > 1 && <Close className='remove' onClick={() => handleDelete()} />}
                 </div>

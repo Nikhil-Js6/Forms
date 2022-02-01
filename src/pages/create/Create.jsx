@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './create.css';
 import Field from '../../components/Field/Field';
 import Header from '../../components/Header/Header';
@@ -24,8 +24,16 @@ function Create() {
         link: '',
     });
 
+    useEffect(() => {
+        const copyFields = [...fields];
+        copyFields[elements-1] = field;
+        setFields(copyFields);
+        setFormData({...formData,fields:fields})
+    },[field])
+
     const handleSumbit = async (e) => {
         e.preventDefault();
+        console.log(formData);
         try {
             const res = await axios.post("http://localhost:3300/form/create", formData);
             setSuccess(true);
@@ -37,7 +45,6 @@ function Create() {
     }
     const handleCreate = () => {
         setField({});
-        setFormData({...formData, fields});
         setelements(elements+1);
         console.log(formData);
     }
