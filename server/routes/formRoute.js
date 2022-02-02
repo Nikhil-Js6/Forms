@@ -3,7 +3,6 @@ const Form = require('../models/Form');
 const Response = require('../models/Response');
 
 
-
 // Create the form
 
 router.post("/form/create", async (req, res) => {
@@ -18,7 +17,6 @@ router.post("/form/create", async (req, res) => {
     }
 });
 
-
 // Get the form
 
 router.get("/form/:id", async (req, res) => {
@@ -31,7 +29,6 @@ router.get("/form/:id", async (req, res) => {
         console.log(err);
     }
 });
-
 
 // Create Responses
 
@@ -47,7 +44,6 @@ router.post('/response/', async(req, res) => {
     }
 });
 
-
 // Get Responses
 
 router.get('/response/:id', async(req, res) => {
@@ -60,7 +56,6 @@ router.get('/response/:id', async(req, res) => {
         console.log(err);
     }
 });
-
 
 // Update Responses
 
