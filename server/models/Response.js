@@ -16,5 +16,4 @@ const responseSchema = new mongoose.Schema({
     ],
 });
 
-
 module.exports = new mongoose.model("Responses", responseSchema);
